@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #181818;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color:hsla(0, 0%, 100%, 0.356);
+  }
+body{
+    background-color:#181818;
+    color:white;
+    font-family: 'Poppins', sans-serif;
+}
+.cabecalho{
+    background-color:hsla(0, 0%, 100%, 0.08);
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    padding:10px 35px;
+    align-items:center;
+}
+.menu ul li{
+    display:inline-block;
+    margin:5px;
+    padding:5px;
+}
+.menu a{
+    color:white;
+    text-decoration:none;
+}
+.menu a:hover{
+    border-top:2px solid white;
+}
+.show{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    margin:auto;
+}
+.show-title{
+    padding:20px;
+    margin:10px auto;
+    font-size:50px;
+}
+.show a{
+    background-color:hsla(0, 0%, 100%, 0.08);
+    color:white;
+    padding:10px;
+    text-decoration:none;
+    border-radius:10px;
+    width:200px;
+}
+.show a:hover{
+    outline:2px solid hsl(260, 84%, 51%);
+}
+.title{
+    text-align:center;
+    padding:5px;
+    margin:10px auto;
+    font-size:25px;
+    width:200px;
+    border-bottom:2px solid hsl(260, 84%, 51%);
+}
+.boxes{
+    text-align:center;
+    display:grid;
+    grid-template-areas:
+        "box box box"
+        "box box box"
+    ;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    margin:20px auto;
+}
+.box{
+    background-color:rgba(255, 255, 255, 0.1);
+    color:white;
+    padding:20px;
+    min-width:100px;
+    min-height:100px;
+    max-width:250px;
+    max-height:250px;
+    grid-area:"box";
+    margin:15px;
+    display:flex;
+    border-radius:15px;
+}
+.box:hover{
+    outline:hsl(260, 84%, 51%) 2px solid;
+    cursor:pointer;
+}
+.box-content{
+    margin:auto;
+}
+.about{
+    max-width:500px;
+    min-width:70px;
+    margin:15px auto;
+    text-align:center;
+    padding:10px;
+}
+.diferenciais{
+    text-align:center;
+    display:grid;
+    grid-template-areas:
+        "dif dif dif"
+    ;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    margin:20px;
+}
+.dif{
+    background-color:rgba(255, 255, 255, 0.1);
+    color:white;
+    padding:15px;
+    min-width:100px;
+    min-height:100px;
+    max-width:300px;
+    max-height:300px;
+    grid-area:"dif";
+    margin:15px;
+    display:flex;
+    border-radius:15px;
+    flex-direction:column;
+}
+.dif i{
+    margin:2px;
+    padding:5px;
+}
+.dif-content{
+    margin:auto;
+}
+.rodape{
+    background-color:hsla(0, 0%, 100%, 0.08);
+    color:white;
+    height:100px;
+    width:100%;
+    text-align:center;
+    display:flex;
+    justify-content:center;
+}
+.footer-content{
+    margin:auto;
+}
+@media(max-width:630px){
+    .cabecalho{
+        background-color:hsla(0, 0%, 100%, 0.08);
+        color:white;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+    .menu ul li{
+        text-align:center;
+        display:block;
+        margin:5px;
+        padding:5px;
+        border-bottom:2px solid white;
+    }
+    .show-title{
+        width:100%;
+        padding:20px;
+        margin:10px auto;
+        font-size:42px;
+    }
+    .boxes{
+        text-align:center;
+        display:grid;
+        grid-template-areas:
+            "box"
+            "box"
+            "box"
+            "box"
+            "box"
+            "box"
+        ;
+        justify-content:center;
+        align-items:center;
+    }
+    .box{
+        color:white;
+        padding:10px;
+        min-width:100px;
+        min-height:100px;
+        max-width:250px;
+        max-height:250px;
+        grid-area:"box";
+        grid-column:box;
+        margin:15px;
+        display:flex;
+    }
+    .box-content{
+        margin:auto;
+    }
+    .diferenciais{
+        text-align:center;
+        display:grid;
+        grid-template-areas:
+            "dif"
+            "dif"
+            "dif"
+        ;
+        justify-content:center;
+        align-items:center;
+    }
+    .dif{
+        color:white;
+        padding:10px;
+        min-width:100px;
+        min-height:50px;
+        max-width:300px;
+        max-height:200px;
+        grid-area:"dif";
+        margin:15px;
+        display:flex;
+    }
+}
